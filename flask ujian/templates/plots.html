@@ -1,0 +1,29 @@
+  
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Ini Page Plot</h1>
+    <i>Ini Adalah Page Plot</i>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart" id="mpg">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="chart" id="horse">
+            </div>
+        </div>  
+        
+    </div>
+    
+
+    <script>
+        // var count_type1 =
+        // var plot2 = {{data[1] | safe}}
+        Plotly.plot('mpg' , {{data[0] | safe}} , {})
+        Plotly.plot('horse' , {{data[1] | safe}} , {})
+       
+    </script>
+
+{% endblock body %}
